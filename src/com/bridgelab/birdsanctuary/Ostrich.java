@@ -1,6 +1,6 @@
 package com.bridgelab.birdsanctuary;
 
-public class Ostrich extends Bird {
+public class Ostrich extends Bird implements Swimmable {
 	
 	public Ostrich(String id) {
 		name = "ostrich";
@@ -8,11 +8,10 @@ public class Ostrich extends Bird {
 		color = Color.WHITE;
 	}
 
-	public Ostrich() {
-        super();
+	public void swim() {
+		System.out.println("Ostrich Cant swim");
 	}
-
-	void swim() {
-		System.out.println("Cant swim");
-	}
+	
+	
 }
+

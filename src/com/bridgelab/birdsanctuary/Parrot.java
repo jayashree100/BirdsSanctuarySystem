@@ -1,6 +1,6 @@
 package com.bridgelab.birdsanctuary;
 
-class Parrot extends Bird {
+class Parrot extends Bird implements Flyable {
 
 	public Parrot() {
 		super();
@@ -13,7 +13,7 @@ class Parrot extends Bird {
 		this.id = id;
 	}
 
-	void swim() {
-		System.out.println("Cant swim");
+	public void swim() {
+		System.out.println("parrot Cant swim");
 	}
 }

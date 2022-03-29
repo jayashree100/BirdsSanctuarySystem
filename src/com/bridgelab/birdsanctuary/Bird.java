@@ -2,14 +2,16 @@ package com.bridgelab.birdsanctuary;
 
 import java.util.Objects;
 
-abstract public class Bird {
-	
-	enum Color { RED, GREEN, WHITE, BLACK_WHITE, BLACK, CYAN_GREEN}
-	
+abstract public class Bird implements Flyable, Swimmable {
+
+	enum Color {
+		RED, GREEN, WHITE, BLACK_WHITE, BLACK, CYAN_GREEN
+	}
+
 	String name;
 	String id;
 	Color color;
- 
+
 	@Override
 	public String toString() {
 		return "Bird [name=" + name + ", id=" + id + ", color=" + color + "]";
@@ -33,12 +35,15 @@ abstract public class Bird {
 	}
 
 	public void eat() {
-		System.out.println(getClass().getSimpleName() + " eat");
+		System.out.println(getClass().getSimpleName() + " eat ");
 	}
 
 	public void fly() {
-		System.out.println(getClass().getSimpleName() + " cant fly");
+		System.out.println(getClass().getSimpleName() + " can fly");
 
 	}
 
+	public void swim() {
+		System.out.println(getClass().getSimpleName() + " can swim ");
+	}
 }
