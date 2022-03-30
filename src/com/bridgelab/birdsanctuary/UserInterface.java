@@ -51,7 +51,7 @@ public class UserInterface {
 		return option;
 	}
 	public int showUpdateMenu() {
-		System.out.println("Enter :\n1: id \n2: color \n2:name");
+		System.out.println("Enter :\n1: id \n2: color \n3:name");
 		Scanner scanner = new Scanner(System.in);
 		int option2 = scanner.nextInt();
 		return option2;

@@ -39,7 +39,7 @@ public class BirdRepository {
 
 	void remove(Bird bird) {
 		birdSet.remove(bird);
-		System.out.println("removed successfully");
+		//System.out.println("removed successfully");
 	}
 
 }
