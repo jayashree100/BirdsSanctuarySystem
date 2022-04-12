@@ -4,10 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class BirdRepository {
-	// private List birdList = new ArrayList();
-	private Set<Bird> birdSet = new HashSet();
-
 	private static BirdRepository instance;
+	static String idOfBirdWhichNeedToBeEdited;
+
+	public Set<Bird> birdList = new HashSet<>();
 
 	private BirdRepository() {
 
@@ -20,26 +20,26 @@ public class BirdRepository {
 		return instance;
 	}
 
-	public Set getBirdList() {
-		return birdSet;
+	Set getBirdList() {
+		return birdList;
 	}
 
-	public Bird getBird(String id) {
-		for (Bird bird : birdSet) {
-			if (bird.id.equals(id))
-				System.out.println(bird.name);
-			return bird;
+	public void add(Bird bird) {
+		birdList.add(bird);
+	}
+
+	public void remove(Bird bird) {
+		birdList.remove(bird);
+	}
+
+	Bird getBird(String id) {
+		for (Bird bird : birdList) {
+			if (bird.id.equals(id)) {
+				System.out.println("Bird found");
+				return bird;
+			}
 		}
+		System.out.println("Sorry Bird Not Found ...... ");
 		return null;
 	}
-
-	void add(Bird bird) {
-		birdSet.add(bird);
-	}
-
-	void remove(Bird bird) {
-		birdSet.remove(bird);
-		//System.out.println("removed successfully");
-	}
-
 }
